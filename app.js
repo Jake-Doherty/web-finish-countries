@@ -64,6 +64,8 @@ function displayCountries() {
 
     for (const country of countries) {
         // > Part A: render and append to list
+        const countryEl = renderCountry(country);
+        countryList.append(countryEl);
     }
 }
 
