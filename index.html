@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- title and favicon -->
+    <title>Countries</title>
+    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+
+    <!-- js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script type="module" src="app.js"></script>
+
+    <!-- fonts -->
+    <!-- see https://fonts.google.com/ -->
+
+    <!-- css -->
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <!-- add link for page specific css -->
+    <link rel="stylesheet" href="styles/countries.css" />
+
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="assets/world.webp" alt="world map">
+        <h1>Countries</h1>
+    </header>
+
+    <main>
+        <section class="search">
+            <form id="search-form">
+                <input name="name" placeholder="name">
+                <select id="continent-select" name="continent">
+                    <option value="">All continents</option>
+                </select>
+                <button>🔍</button>
+            </form>
+
+            <p id="notification-display">
+                Search to find Countries
+            </p>
+        </section>
+
+        <ul class="list" id="country-list">
+
+        </ul>
+    </main>
+
+</body>
+
+</html>
