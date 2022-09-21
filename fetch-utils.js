@@ -15,10 +15,12 @@ export async function getCountries(name, continent) {
 
     if (name) {
         // > Part C: add query for name
+        query = query.ilike('name', `%${name}%`);
     }
 
     if (continent) {
         // > Part C: add query for continent
+        query = query.eq('continent', continent);
     }
 
     // > Part A: `await` the query and return the response
